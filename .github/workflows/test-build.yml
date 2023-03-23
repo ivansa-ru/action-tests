@@ -1,0 +1,9 @@
+name: test-build
+run-name: test-build
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: locate python

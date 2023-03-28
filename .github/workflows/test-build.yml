@@ -1,9 +1,11 @@
-name: test-build
-run-name: test-build
+name: check-secret
 on: [push]
 jobs:
-  check-bats-version:
+  compile-cdtapi3:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - run: sudo apt install python2
+      - name: check-secret
+        shell: bash
+        env:
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: echo "$TWINE_PASSWORD"

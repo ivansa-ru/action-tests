@@ -1,0 +1,10 @@
+name: check-secret
+on: [push,workflow_dispatch]
+jobs:
+  checkout-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Run main
+        uses: ./.github/workflows/main.yml

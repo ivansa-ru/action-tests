@@ -1,0 +1,8 @@
+name: main
+jobs:
+  check-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check-secret
+        shell: bash
+        run: echo "var=$VARIABLE"

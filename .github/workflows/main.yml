@@ -1,6 +1,5 @@
 name: main
   on: workflow_call
-
 jobs:
   check-secret:
     runs-on: ubuntu-latest

@@ -7,4 +7,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
   run-main:
+    environment: dev
     uses: ./.github/workflows/main.yml

@@ -1,5 +1,7 @@
-name: Push
-on: [push,workflow_dispatch]
+name: Release
+on:
+  release:
+    types: [published]
 jobs:
   checkout-and-run:
     runs-on: ubuntu-latest
@@ -9,4 +11,4 @@ jobs:
   run-main:
     uses: ./.github/workflows/main.yml
     with:
-      process_env: dev
+      process_env: test

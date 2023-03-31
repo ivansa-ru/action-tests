@@ -8,6 +8,7 @@ on:
 jobs:
   check-secret:
     runs-on: ubuntu-latest
+    environment: ${{ inputs.process_env }}
     steps:
       - name: check-secret
         shell: bash

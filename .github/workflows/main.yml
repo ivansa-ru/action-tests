@@ -1,9 +1,14 @@
 name: main
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      process_env:
+        required: true
+	type: string
 jobs:
   check-secret:
     runs-on: ubuntu-latest
     steps:
       - name: check-secret
         shell: bash
-        run: echo {{ env.ENV_NAME }}
+        run: echo "process_env: ${{ inputs.process_env }}"

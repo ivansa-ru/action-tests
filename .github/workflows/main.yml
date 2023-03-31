@@ -4,7 +4,7 @@ on:
     inputs:
       process_env:
         required: true
-	type: string
+        type: string
 jobs:
   check-secret:
     runs-on: ubuntu-latest

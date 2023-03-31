@@ -11,4 +11,5 @@ jobs:
     steps:
       - name: check-secret
         shell: bash
-        run: echo "process_env: ${{ inputs.process_env }}"
+        run: echo "sad"
+

@@ -10,3 +10,13 @@ jobs:
     uses: ivansa-ru/action-tests/.github/workflows/main.yml@master
     with:
       process_env: dev
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump env
+        run: env | sort
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"

@@ -7,6 +7,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
   run-main:
-    uses: ivansa-ru/action-tests/.github/workflows/common-workflows/main.yml@main
+    uses: ivansa-ru/action-tests/.github/workflows/main.yml@main
     with:
       process_env: dev

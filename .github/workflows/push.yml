@@ -20,3 +20,5 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
+      - name: run unique
+        run: ~/bin/unique.sh

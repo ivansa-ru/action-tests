@@ -2,7 +2,7 @@ name: Push
 on: [push,workflow_dispatch]
 jobs:
   checkout-and-run:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -12,7 +12,7 @@ jobs:
       process_env: dev
   debug:
     name: Debug
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Dump env
         run: env | sort

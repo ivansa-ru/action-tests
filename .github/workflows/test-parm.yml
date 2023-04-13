@@ -1,0 +1,7 @@
+name: test-parm
+on: [push]
+jobs:
+  run-parametrized:
+    uses: ivansa-ru/action-tests/.github/workflows/runsome.yml
+    with:
+      versions: '2'

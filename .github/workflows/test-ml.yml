@@ -1,8 +1,9 @@
 name: Test ml
 on: [push, workflow_dispatch]
 jobs:
-  testFile:
+  test:
     runs-on: ubuntu-latest
+    steps:
     - name: Checkout
       uses: actions/checkout@v1
     - run: |

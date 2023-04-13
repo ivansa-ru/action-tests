@@ -1,5 +1,5 @@
 name: Test ml
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   testFile:
     runs-on: ubuntu-latest

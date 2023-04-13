@@ -8,7 +8,7 @@ on:
 jobs:
   proceed-if-a:
     if: contains(env.versions, '2') == true
-    uses: ivansa-ru/action-tests/.github/workflows/run-a.yml
+    uses: ivansa-ru/action-tests/.github/workflows/run-a.yml@master
   proceed-if-b:
     if: contains(env.versions, '3') == true
-    uses: ivansa-ru/action-tests/.github/workflows/run-b.yml
+    uses: ivansa-ru/action-tests/.github/workflows/run-b.yml@master

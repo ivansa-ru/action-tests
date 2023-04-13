@@ -3,8 +3,9 @@ on:
   workflow_call:
     inputs:
       versions:
-        required: true
+        required: false
         type: string
+        default: '2'
 jobs:
   check-versions:
     runs-on: ubuntu-latest

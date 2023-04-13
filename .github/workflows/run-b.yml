@@ -1,7 +1,7 @@
 name: Run B
 on: [workflow_call, workflow_dispatch]
 jobs:
-  Run B:
+  RunB:
     runs-on: ubuntu-latest
     steps:
      - name: checkout

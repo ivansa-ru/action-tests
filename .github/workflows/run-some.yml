@@ -7,7 +7,7 @@ on:
         type: string
 jobs:
   proceed-if-a:
-    if: ${{ contains(vars.versions, '2') == true }
+    if: ${{ contains(vars.versions, '2') == true }}
     uses: ivansa-ru/action-tests/.github/workflows/run-a.yml@master
   proceed-if-b:
     if: contains(vars.versions, '3') == true

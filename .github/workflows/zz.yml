@@ -1,0 +1,17 @@
+name: ZZ
+on: [push]
+jobs:
+  test-pspg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: installpython
+        uses:
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.7'
+      - name: install
+        run: sudo apt-get install python3-psycopg2
+      - name: check-import
+        run: python3 check-import.py

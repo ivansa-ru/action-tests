@@ -1,5 +1,5 @@
 name: test-parm
-on: [push]
+on: [workflow_dispatch]
 jobs:
   run-parametrized:
     uses: ivansa-ru/action-tests/.github/workflows/run-some.yml@master

@@ -1,0 +1,15 @@
+name: Test ml
+on: [push]
+jobs:
+  testFile:
+    runs-on: ubuntu-latest
+    - name: Checkout
+      uses: actions/checkout@v1
+    - run: |
+      if [ -f required-binaries.txt ]
+      then
+        cat required-binaries.txt
+      else
+        echo "no required binaries"
+      fi
+

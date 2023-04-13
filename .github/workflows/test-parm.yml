@@ -4,4 +4,4 @@ jobs:
   run-parametrized:
     uses: ivansa-ru/action-tests/.github/workflows/run-some.yml@master
     with:
-      versions: '3'
+      versions: '3,2'

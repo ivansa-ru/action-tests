@@ -7,8 +7,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - run: |
-      if [ -f required-binaries.txt ]
-      then
+      if test -f required-binaries.txt; then
         cat required-binaries.txt
       else
         echo "no required binaries"

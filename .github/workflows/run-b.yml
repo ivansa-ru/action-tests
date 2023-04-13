@@ -1,0 +1,11 @@
+name: Run B
+on: [workflow_call, workflow_dispatch]
+jobs:
+  Run B:
+    runs-on: ubuntu-latest
+    steps:
+     - name: checkout
+       uses: actions/checkout@v1
+     - name: Run B
+       run: echo 'this is run B'
+

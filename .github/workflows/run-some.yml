@@ -6,6 +6,10 @@ on:
         required: true
         type: string
 jobs:
+  check-versions:
+    steps:
+      - run:
+        echo ${{ vars.versions }}
   proceed-if-a:
     if: ${{ contains(vars.versions, '2') == true }}
     uses: ivansa-ru/action-tests/.github/workflows/run-a.yml@master

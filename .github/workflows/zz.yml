@@ -10,3 +10,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.7'
+      - name: bins
+        run: sudo apt-get install python3-psycopg2
+      - name: check
+        run: python3 check-import.py

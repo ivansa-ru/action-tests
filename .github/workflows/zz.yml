@@ -6,10 +6,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: setup python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.7'
       - name: bins
         run: sudo apt-get -y install python3-psycopg2 mlocate
       - name: updatedb
